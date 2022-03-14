@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script> 
+        <script>
+          // Your web app's Firebase configuration
+          const firebaseConfig = {
+            apiKey: "AIzaSyCop0Vtt6hd6NsbOB1Pn-4PXWFa0m7UPKc",
+            authDomain: "huzaifaghoriport.firebaseapp.com",
+            projectId: "huzaifaghoriport",
+            storageBucket: "huzaifaghoriport.appspot.com",
+            messagingSenderId: "191940882584",
+            appId: "1:191940882584:web:9d6aa68a58c680ea8d60ed"
+    };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <fieldset id="cvv">
+        <h2 class="headttl forfont" style="display: none;">My Resume</h2>
+        <div class="container basecont">
+          <!-- <div class="col-md-12"> -->
+            <div class="sidedbar" >
+              <input type="file" id="cvimg" accept="image/png, image/jpg">
+              <div class="resimgmoc" id="dispimg">
+  </div>
+  <br><br>
+  <hr class="gaped">
+  <h3 class="sidedhead forfont">Info</h3>
+  <ul class="listed  forfont">
+    <li><input type="text" placeholder="Name..." id="text1" class="cvinp forfont"></li>
+    <li><input type="text" placeholder="Age..." id="text2" class="cvinp forfont"></li>
+    <li><input type="text" placeholder="Phone No..." id="text3" class="cvinp forfont"></li>
+    <li><input type="text" placeholder="Email..." id="text4" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead forfont">Skills</h3>
+  <p class="forfont"> -- I have strong command on the following:</p>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text5" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text6" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text7" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text8" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text9" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead forfont">Hobbies</h3>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text10" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text11" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text12" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead forfont">Interests</h3>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text13" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text14" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text15" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead forfont">Courses</h3>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text16" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text17" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text18" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+</div>
+<div class="sidedbar2">
+  <h3 class="sidedhead2 forfont">Objective</h3>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text19" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead2 forfont">Experience</h3>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text20" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text21" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text22" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead2 forfont">Education</h3>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text23" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text24" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text25" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead2 forfont">Personal Information</h3>
+  <ul class="listed forfont" >
+      <li><input type="text" placeholder="Date of Birth" id="text26" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Religion" id="text27" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Nationality" id="text28" class="cvinp forfont"></li>
+  </ul>
+  <hr class="gaped">
+  <h3 class="sidedhead2 forfont">Skills & Abilities</h3>
+  <ul>
+    <li><h3 class="forfont">  &nbsp; &nbsp;Type in detail here</h3></li></ul>
+    <ul class="listed forfont" >
+      <li><input type="text" placeholder="Type Here..." id="text29" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text30" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text31" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text32" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text33" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text34" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text35" class="cvinp forfont"></li>
+      <li><input type="text" placeholder="Type Here..." id="text36" class="cvinp forfont"></li>
+    </ul>
+    <hr class="gaped">
+    <h3 class="sidedhead2 forfont">Core Competencies</h3>
+    <ul class="listed forfont" >
+        <li><input type="text" placeholder="Type Here..." id="text37" class="cvinp forfont"></li>
+        <li><input type="text" placeholder="Type Here..." id="text38" class="cvinp forfont"></li>
+        <li><input type="text" placeholder="Type Here..." id="text39" class="cvinp forfont"></li>
+    </ul>
+    <hr class="gaped">
+    <h3 class="sidedhead2 forfont">S.W.O.T</h3>
+    <ul class="listed forfont" >
+        <li><input type="text" placeholder="Type Here..." id="text40" class="cvinp forfont"></li>
+        <li><input type="text" placeholder="Type Here..." id="text41" class="cvinp forfont"></li>
+        <li><input type="text" placeholder="Type Here..." id="text42" class="cvinp forfont"></li>
+        <li><input type="text" placeholder="Type Here..." id="text43" class="cvinp forfont"></li>
+    </ul>
+</div>
+</div>
+<!-- <hr class="gaped"> -->
+
+
+
+<!-- <form>
+<legend>For sections</legend>
+
+<label>How many sections you want in sidebar?</label>
+<input type="number" id="barid" placeholder="Select">
+<label>How many points you want in each heading?</label>
+        <input type="number" id="baredid" placeholder="Select">
+          
+        <label>How many sections you want in description?</label>
+        <input type="number" id="mainid" placeholder="Select">
+        <label>How many options you want in each heading?</label>
+        <input type="number" id="mainedid" placeholder="Select">
+        <button type="button" class="btn btn-success" onclick="addform()">Enter</button>
+      </form> -->
+      <!-- <hr class="gaped">
+      <h2 class="headttl">For Sidebar</h2>
+      <form>
+        <input type="text" class="headinp" id="headside1" placeholder="Heading">
+        <form>
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+        </form>
+    </form>
+      <hr class="gaped">
+      <form>
+        <input type="text" class="headinp" id="headside2" placeholder="Heading">
+        <form>
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+        </form>
+    </form>
+      <hr class="gaped">
+      <form>
+        <input type="text" class="headinp" id="headside3" placeholder="Heading">
+        <form>
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+          <input type="text" class="headinp" placeholder="Type Content">
+        </form>
+    </form>
+      <hr class="gaped">
+      <h2 class="headttl">For Main</h2>
+      <form>
+        <input type="text" class="headm" id="headmain1" placeholder="Heading">
+        <form>
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+        </form>
+    </form>
+      <hr class="gaped">
+      <form>
+        <input type="text" class="headm" id="headmain2" placeholder="Heading">
+        <form>
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+        </form>
+    </form>
+      <hr class="gaped">
+      <form>
+        <input type="text" class="headm" id="headmain3" placeholder="Heading">
+        <form>
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+          <input type="text" class="headm" placeholder="Type Content">
+        </form>
+    </form> -->
+  </fieldset>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" id ="connect"  value="Connect Wallet" onclick="Connect()"> Connect Wallet</button>
+    <button type="button" class="btn btn-primary" onclick="addhead()">Finish</button>
+   
+    <button type="button" class="btn btn-success" id="slick"  >Generate</button>
+
+    
+    <!-- <button type="button" class="btn btn-success" onclick="tocheck()">Generate</button> -->
+  </div>
+  <div class="idgen">
+    <h1 style="color:white;"  > -- Your CV id is: <br><span id="idcv"></span></h1>
+    <button type="button" class="btn btn-danger copybtn" id="copyBtn">Copy</button>
+    
+    <ol style="color: white;">
+      <li style="padding: 30px;" >1) If you are satisfied with your CV click on Connect Wallet button</li>
+      <li style="padding: 30px;" >2) MetaMask will pop up then , sign it so that your data can be stored on blockChain.</li>
+
+      <li style="padding: 30px;">2)  Then  click on Finish button , A CV ID  will then be shown on the bottom left corner of the screen | COPY THAT!!! </li>
+      <li style="padding: 30px;">3) Then click on generate and a new link will be popped where you have to paste your CV ID</li>
+      <li style="padding-left: 500px;" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" > #HERE YOU GO YOUR CV IS GENERATED , YOU COULD PRINT NOW !</li>
+    </ol>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="cv.js"></script>
+  <script src="complains.js"></script>
+</body>
+</html>
